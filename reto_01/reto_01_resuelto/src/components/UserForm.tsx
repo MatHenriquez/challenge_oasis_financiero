@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import styles from "./UserForm.module.css";
 
 interface FormData {
   firstName: string;
@@ -52,34 +53,52 @@ export default function UserForm() {
 
   return (
     <>
-      <div>
-        <h2>User Form</h2>
+      <div className={styles.container}>
+        <h2 className={styles.title}>User Form</h2>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label>First Name:</label>
+          <div className={styles.inputContainer}>
+            <label className={styles.labels}>First Name:</label>
             <input
               type="text"
               name="firstName"
               onChange={handleChange}
+              className={styles.input}
               required
             />
-            {errors.firstName && <p>{errors.firstName}</p>}
           </div>
-          <div>
-            <label>Last Name:</label>
-            <input type="text" name="lastName" onChange={handleChange} required />
-            {errors.lastName && <p>{errors.lastName}</p>}
+          {errors.firstName && (
+            <span className={styles.error}>{errors.firstName}</span>
+          )}
+          <div className={styles.inputContainer}>
+            <label className={styles.labels}>Last Name:</label>
+            <input
+              type="text"
+              name="lastName"
+              onChange={handleChange}
+              className={styles.input}
+              required
+            />
           </div>
-          <div>
-            <label>Email:</label>
-            <input type="email" name="email" onChange={handleChange} required />
-            {errors.email && <p>{errors.email}</p>}
+          {errors.lastName && (
+            <span className={styles.error}>{errors.lastName}</span>
+          )}
+          <div className={styles.inputContainer}>
+            <label className={styles.labels}>Email:</label>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              className={styles.input}
+              required
+            />
           </div>
-
-          <button type="submit" disabled={isSubmitDisabled}>Submit</button>
+          {errors.email && <span className={styles.error}>{errors.email}</span>}
+          <br />
+          <button type="submit" className={styles.button} disabled={isSubmitDisabled}>
+            Submit
+          </button>
         </form>
       </div>
     </>
   );
 }
-
