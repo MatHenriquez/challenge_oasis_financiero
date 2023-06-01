@@ -43,6 +43,8 @@
 }
 
 .labels{
+    display: flex;
+    justify-content: left;
     width: 10vw;
 }
 
