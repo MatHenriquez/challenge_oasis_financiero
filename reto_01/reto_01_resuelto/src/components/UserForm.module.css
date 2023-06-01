@@ -36,6 +36,12 @@
     color: var(--color-tertiary);
 }
 
+.okMessage{
+    display: flex;
+    justify-content: right;
+    color: var(--color-tertiary);
+}
+
 .labels{
     width: 10vw;
 }
@@ -43,10 +49,18 @@
 .button{
     color: var(--color-text);
     background-color: var(--color-primary);
+    border-radius: 2%;
 }
 
 .button:hover{
     background-color: var(--color-tertiary);
+}
+
+.button:disabled{
+    border: 1px solid;
+    border-radius: 2%;
+    border-color: var(--color-secondary);
+    background-color: var(--color-background);
 }
 
 /* Estilos para pantallas pequeñas y medianas */

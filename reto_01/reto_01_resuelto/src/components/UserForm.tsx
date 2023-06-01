@@ -33,7 +33,6 @@ export default function UserForm() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(data);
   };
 
   useEffect(() => {
@@ -66,9 +65,9 @@ export default function UserForm() {
               required
             />
           </div>
-          {errors.firstName && (
-            <span className={styles.error}>{errors.firstName}</span>
-          )}
+          {errors.firstName
+            ? ( <span className={styles.error}>{errors.firstName}</span> )
+            :<span className={styles.okMessage}>✓ Ok</span>}
           <div className={styles.inputContainer}>
             <label className={styles.labels}>Last Name:</label>
             <input
@@ -79,9 +78,9 @@ export default function UserForm() {
               required
             />
           </div>
-          {errors.lastName && (
-            <span className={styles.error}>{errors.lastName}</span>
-          )}
+          {errors.lastName
+            ? ( <span className={styles.error}>{errors.lastName}</span> )
+            :<span className={styles.okMessage}>✓ Ok</span>}
           <div className={styles.inputContainer}>
             <label className={styles.labels}>Email:</label>
             <input
@@ -92,7 +91,9 @@ export default function UserForm() {
               required
             />
           </div>
-          {errors.email && <span className={styles.error}>{errors.email}</span>}
+          {errors.email
+            ? ( <span className={styles.error}>{errors.email}</span> )
+            :<span className={styles.okMessage}>✓ Ok</span>}
           <br />
           <button type="submit" className={styles.button} disabled={isSubmitDisabled}>
             Submit
