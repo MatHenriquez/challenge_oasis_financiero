@@ -1,0 +1,4 @@
+Separar el HTML en CSS, comparador.ts y los datos en data.JSON
+Trabajar en la estética de la tabla de salida, para un obtener un resultado apto para una web app comercial.
+No es necesario usar React en este reto.
+Puntos extra por un resultado bien estilizado, responsivo y original. Puedes usar librerías de estilo y componentes.

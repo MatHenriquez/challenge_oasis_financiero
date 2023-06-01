@@ -1,0 +1,9 @@
+Actualizar el API request para que utilice fetch con el endpoint:
+https://api.dictionaryapi.dev/api/v2/entries/en/<word>
+
+El formato JSON de respuesta está documentado aquí:
+https://dictionaryapi.dev/
+
+Crea un app sencilla de React que haga llamadas a este API dependiendo de las palabras que los usuarios introduzcan.
+El output con las definiciones en la respuesta del endpoint puede ser presentado con el formato a tu gusto.
+Asegurar que sea responsivo, pero la estética NO es el enfoque principal.
