@@ -1,0 +1,25 @@
+[
+    {
+      "institucionFinanciera": "BBVA",
+      "instrumento": [
+        {
+          "debito": "BBVA Nomina",
+          "apertura": 0.0,
+          "cheques": false,
+          "comisionAnual": 350.0
+        }
+      ]
+    },
+    {
+      "institucionFinanciera": "HSBC",
+      "instrumento": [
+        {
+          "debito": "HSBC Zero",
+          "apertura": 0.0,
+          "cheques": false,
+          "comisionAnual": 0.0
+        }
+      ]
+    }
+  ]
+  

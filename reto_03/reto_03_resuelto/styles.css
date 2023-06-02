@@ -1,0 +1,66 @@
+/*Neon Purple Color Palette */
+:root {
+  --color-primary: #6a00ff;
+  --color-secondary: #8b00ff;
+  --color-tertiary: #a020f0;
+  --color-background: #0d0d0d;
+  --color-text: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(var(--color-text), var(--color-tertiary)); 
+}
+
+p {
+  box-shadow: 5px 2px 5px #0d0d0d;
+  background-color: var(--color-background);
+  padding: 3px 9px;
+  font-size: xx-large;
+  border-radius: 6px;
+}
+
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 80vw;
+  height: 30vh;
+  box-shadow: 5px 2px 50px #0d0d0d;
+  font-size: larger;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid var(--color-secondary);
+}
+
+th {
+  color: var(--color-text);
+  background: linear-gradient(to left, #a020f0, #8b00ff); 
+  font-size: x-large;
+  border: 2px solid white
+}
+
+td {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Estilos para pantallas pequeñas y medianas */
+@media (max-width: 1023px) {
+  h2{
+    width: 95vw;
+  }
+
+  table{
+    font-size: larger;
+    width: 95vw;
+    height: 60vh;
+  }
+}
