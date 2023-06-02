@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 80vh;
+  margin: 0px;
+}
+
+.title{
+    width: 40vw;
+    border-radius: 5%;
+    background-color: rgb(20, 139, 244);
+}
+
+.input{
+    width: 20vw;
+    padding: 1%;
+}
+
+.inputContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.error{
+    display: flex;
+    justify-content: right;
+    color: red;
+}
+
+.okMessage{
+    display: flex;
+    justify-content: right;
+    color: green;
+}
+
+.labels{
+    display: flex;
+    justify-content: left;
+    width: 10vw;
+}
+
+.button{
+    border-radius: 2%;
+}
+
+.button:hover{
+    background-color: var(--color-tertiary);
+}
+
+.button:disabled{
+    border: 1px solid;
+    border-radius: 2%;
+    border-color: var(--color-secondary);
+    background-color: var(--color-background);
+}
+
+/* Estilos para pantallas pequeñas y medianas */
+@media (max-width: 1023px) {
+  .inputContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input{
+        width: 60vw;
+    }
+
+    .labels{
+        display: flex;
+        justify-content: left;
+        width: 60vw;
+    }
+}
+

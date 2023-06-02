@@ -2,10 +2,12 @@ const http = require('http');
 
 const word = 'example';
 
+const apiUrl = 'https://api.dictionaryapi.dev'
+
 const options = {
   hostname: 'localhost',
   port: 80,
-  path: `/api/v2/entries/en/${word}`,
+  path: `${apiUrl}/api/v2/entries/en/${word}`,
   method: 'GET'
 };
 
