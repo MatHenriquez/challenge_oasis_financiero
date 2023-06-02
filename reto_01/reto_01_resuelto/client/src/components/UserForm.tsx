@@ -31,8 +31,27 @@ export default function UserForm() {
     setData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:3001/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create user");
+      }
+
+      alert("User created successfully");
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

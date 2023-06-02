@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const UserModel = require("../models/users.model");
+const cors = require("cors");
 
 const app = express();
 
@@ -14,6 +15,20 @@ const uri = `mongodb+srv://matiashenriquezdev:${password}@cluster0.2fvecel.mongo
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//Cors para poder acceder a la api desde el front.
+app.use(cors());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+
+  next();
+});
 
 // MongoDB connection
 const connection = () =>
